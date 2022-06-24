@@ -1,0 +1,143 @@
+
+body{
+    background-color: black;
+}
+
+@font-face {
+    font-family: SummerDance;
+    src: url(summer-dance/SummerDance.otf);
+}
+
+@font-face{
+    font-family: SummerDance;
+    src: url(summer-dance/SummerDance.ttf);
+}
+
+.love{
+    display: flex;
+    justify-content: center;
+}
+
+.caja{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    grid-template-rows: 20rem;
+    width: 50%;
+}
+
+.cajita{
+    width: 150px;
+    height: 170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+    display: grid;
+    align-content: center;
+    border-radius: 20px;
+    transition: 500ms;
+    margin-top: 1cm;
+    opacity: 0.05;
+    cursor: pointer;
+}
+
+.cajita:nth-child(1){
+    background-color: rgb(255, 0, 255);
+}
+
+.cajita:nth-child(2){
+    background-color: rgb(128, 0, 255);
+}
+
+.cajita:nth-child(3){
+    background-color: rgb(255, 0, 255);
+}
+
+.cajita:nth-child(4){
+    background-color: rgb(128, 0, 255);
+}
+
+.cajita p{
+    color: white;
+    text-align: center;
+    font-size: 70px;
+    display: none;
+    transition: 1500ms;
+    font-family: SummerDance;
+}
+
+.cajita:hover p{
+    display: block;
+    transition-duration: 1500ms;
+    animation-name: love1;
+    animation-duration: 500ms;
+}
+
+@keyframes love1{
+    0%{
+        opacity: 0;
+    }
+
+    25%{
+        opacity: 0.25;
+    }
+
+    50%{
+        opacity: 0.5;
+    }
+
+    75%{
+        opacity: 0.75;
+    }
+
+    100%{
+        opacity: 1;
+    }
+
+}
+
+.cajita:hover:nth-child(1){
+    box-shadow: 0px 0px 50px 0px rgb(255, 0, 255);
+    margin-top: 30px;
+    opacity: 1;
+}
+
+.cajita:hover:nth-child(2){
+    box-shadow: 0px 0px 50px 0px rgb(128, 0, 255);
+    margin-top: 30px;
+    opacity: 1;
+}
+
+.cajita:hover:nth-child(3){
+    box-shadow: 0px 0px 50px 0px rgb(255, 0, 255);
+    margin-top: 30px;
+    opacity: 1;
+}
+
+.cajita:hover:nth-child(4){
+    box-shadow: 0px 0px 50px 0px rgb(128, 0, 255);
+    margin-top: 30px;
+    opacity: 1;
+}
+
+@media screen and (max-width: 975px){
+    .cajita:nth-child(2){
+        margin-top: -1.2cm;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .cajita{
+        width: 130px;
+        height: 150px;
+        margin-top: 1cm;
+        margin-left: 0;
+    }
+
+    .cajita:nth-child(2){
+        margin-top: -1.8cm;
+    }
+
+    .cajita p{
+        font-size: 40px;
+    }
+}
